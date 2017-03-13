@@ -1,8 +1,18 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+// Override material design default colors
+$color-primary: 255, 211, 73 !default;
+$color-primary-dark: 255, 211, 73 !default;
+$color-accent: 255, 211, 73 !default;
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/material-design-lite/src/material-design-lite.scss";
 // endbower
+
+$primary-header-color: #cccccc;
+$logo-primary-color: #0068a6;
+$logo-secondary-color: #ffd349;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -11,54 +21,46 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+header{
+  a.mdl-layout__tab {
+    &:hover, &:focus {
+      color: $logo-primary-color;
+      text-decoration: none;
+    }
+  }
 
-  /* Make the masthead heading the same height as the navigation */
-  h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+  img.logo {
+    max-width: 300px;
   }
 }
 
-/* Custom page footer */
+.mdl-layout__header {
+  background-color: $primary-header-color;
+}
+
+.mdl-layout__tab-bar {
+  height: auto;
+  background-color: $primary-header-color;
+}
+
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+h1, h2 {
+  background-color: $logo-primary-color;
+  color: $logo-secondary-color;
+  text-align: center;
 }
 
-.logo {
-  img {
-    max-width: 300px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
+table {
+  margin: auto;
 }
