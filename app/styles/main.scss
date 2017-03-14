@@ -1,18 +1,18 @@
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-
 // Override material design default colors
-$color-primary: 255, 211, 73 !default;
-$color-primary-dark: 255, 211, 73 !default;
+$color-primary: 187, 192, 197 !default;
+$color-primary-dark: 160, 165, 170 !default;
 $color-accent: 255, 211, 73 !default;
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/material-design-lite/src/material-design-lite.scss";
 // endbower
 
-$primary-header-color: #cccccc;
+$primary-header-color: #bbc0c5;
+$primary-footer-color: #252E33;
 $logo-primary-color: #0068a6;
 $logo-secondary-color: #ffd349;
+$h1-background: #dde1e6;
+$h1-foreground: #ffffff;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -35,29 +35,47 @@ header{
     }
   }
 
+  .mdl-layout__header-row {
+    max-width: 1170px;
+    width: 100%;
+    align-self: initial;
+  }
+
+  .mdl-layout__tab-bar-container {
+    max-width: 1170px;
+    width: 100%;
+
+    .mdl-layout__tab-bar {
+      height: auto;
+      background-color: $primary-header-color;
+    }
+  }
+
   img.logo {
     max-width: 300px;
   }
 }
 
 .mdl-layout__header {
+  align-items: center;
   background-color: $primary-header-color;
 }
 
-.mdl-layout__tab-bar {
-  height: auto;
-  background-color: $primary-header-color;
+.mdl-grid {
+  max-width: 1170px;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 .footer {
-  padding-top: 19px;
+  padding-top: 16px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  background-color: $primary-footer-color;
 }
 
 h1, h2 {
-  background-color: $logo-primary-color;
-  color: $logo-secondary-color;
+  background-color: $h1-background;
+  color: $h1-foreground;
   text-align: center;
 }
 
