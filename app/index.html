@@ -36,6 +36,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
   </head>
   <body>
@@ -52,20 +53,25 @@
           </div>
           <!-- Tabs -->
           <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Home</a>
-            <a href="#fixed-tab-2" class="mdl-layout__tab">Invoicing</a>
-            <a href="#fixed-tab-3" class="mdl-layout__tab">Contact</a>
+            <a href="#home" class="mdl-layout__tab is-active">Home</a>
+            <a href="#invoicing" class="mdl-layout__tab">Invoicing</a>
+            <a href="#contact" class="mdl-layout__tab">Contact</a>
           </div>
       </header>
       <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h1>Home</h1>
+        <section class="mdl-layout__tab-panel is-active" id="home">
+          <div class="slider">
+            <ul>
+              <li></li>
+              <li style="display: none;"></li>
+            </ul>
+            <div class="slider-arrows">
+              <a href="#" class="previous"><i class="material-icons md-48 md-light">navigate_before</i></a>
+              <a href="#" class="next"><i class="material-icons md-48 md-light">navigate_next</i></a>
             </div>
           </div>
         </section>
-        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+        <section class="mdl-layout__tab-panel" id="invoicing">
           <div class="mdl-grid">
             <section id="invoiceDetails" class="mdl-cell mdl-cell--12-col">
               <h2 class="text-center">Invoice details</h2>
@@ -165,7 +171,7 @@
             </section>
           </div>
         </section>
-        <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+        <section class="mdl-layout__tab-panel" id="contact">
           <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
               <h1>Contact</h1>

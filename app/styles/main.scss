@@ -1,14 +1,40 @@
+// reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
 // Override material design default colors
 $color-primary: 187, 192, 197 !default;
 $color-primary-dark: 160, 165, 170 !default;
 $color-accent: 255, 211, 73 !default;
 
-// bower:scss
 @import "../../bower_components/material-design-lite/src/material-design-lite.scss";
-// endbower
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 $primary-header-color: #bbc0c5;
 $primary-footer-color: #252E33;
+$secondary-footer-color: #3B4950;
 $logo-primary-color: #0068a6;
 $logo-secondary-color: #ffd349;
 $h1-background: #dde1e6;
@@ -79,6 +105,74 @@ h1, h2 {
   text-align: center;
 }
 
+a {
+  color: #3B4950;
+  text-decoration: none;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+}
+
 table {
   margin: auto;
+}
+
+#home {
+  .slider {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    height: 520px;
+
+    ul {
+      position: relative;
+      list-style: none;
+
+      li {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 520px;
+        background-size: cover !important;
+
+        &:nth-child(1) {
+          background: url(../images/carousel1.jpg) center center repeat;
+        }
+
+        &:nth-child(2) {
+          background: url(../images/carousel2.jpg) center center repeat;
+        }
+      }
+    }
+
+    .slider-arrows {
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      z-index: 3;
+      width: 100%;
+
+      .previous {
+        left: 0px;
+        background-position: left;
+        border-radius: 0px 4px 4px 0px;
+      }
+
+      .next {
+        right: 0px;
+        background-position: right;
+        border-radius: 4px 0px 0px 4px;
+      }
+
+      a {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+
 }
