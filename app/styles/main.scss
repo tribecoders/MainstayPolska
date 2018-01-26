@@ -116,6 +116,8 @@ table {
   margin: auto;
 }
 
+
+
 #home {
   .slider {
     position: fixed;
@@ -173,6 +175,12 @@ table {
       }
     }
   }
+}
 
-
+#contact {
+  .map {
+    background: url(../images/background-map.jpg);
+    background-position: center;
+    height: 400px;
+  }
 }
